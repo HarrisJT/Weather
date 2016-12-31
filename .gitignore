@@ -1,4 +1,5 @@
 .idea/
-#  _include/img/
-# *.min.*
-#  robots.txt
+_include/img/
+*.min.*
+robots.txt
+node_modules/

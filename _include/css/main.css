@@ -9,10 +9,13 @@
 }
 
 html {
-    color: #222;
+    color: #000;
     font-size: 1em;
     line-height: 1.4;
+    background: #DBE6EC;
+    height: 100%;
     text-rendering: optimizeLegibility;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
@@ -42,17 +45,53 @@ body {
    Medium Dark : #ffffff
    Dark : #ffffff
    ========================================================================== */
-/* ---------------------------------------
-   Home Page.
-   --------------------------------------- */
 
-/* ---------------------------------------
-   ??? Page.
-   --------------------------------------- */
+.weather-wrapper {
+    width: 70%;
+    margin: 2.5% auto;
+    display: flex;
+    flex-flow: row wrap;
+    background: #fafaff;
+}
 
-/* ---------------------------------------
-   ??? Page.
-   --------------------------------------- */
+.weather-wrapper > * {
+    flex: 1 50%;
+}
+
+.weather-daily {
+    padding: 0 .66em;
+    border-top: 1px solid #d0d9dc;
+}
+
+.weather-current {
+    padding-bottom: 1.32em;
+    border-bottom: 1px solid #d0d9dc;
+}
+
+.weather-today__hourly {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.weather-weekly {
+    padding: 0 .66em;
+    border-left: 1px solid #d0d9dc;
+    border-top: 1px solid #d0d9dc;
+
+}
+
+.weather-unit {
+    display: flex;
+    flex: 3 100%;
+}
+
+.weather-unit__celsius, .weather-unit__fahrenheit {
+    flex: 1 50%;
+}
+
 
 /* ==========================================================================
    HELPER CLASSES
@@ -72,15 +111,18 @@ body {
    MEDIA QUERIES
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1450px) {
+    .weather-wrapper {
+        width: 90%;
+    }
+
 }
 
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media only screen and (max-width: 850px) {
+    .weather-wrapper > * {
+        flex: 1 100%;
+    }
+
 }
 
 /* ==========================================================================

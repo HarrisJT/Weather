@@ -20,7 +20,7 @@
     <link rel="preconnect" href="//www.google-analytics.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
 
-    <title>???</title>
+    <title>HarrisJT's Local Weather</title>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@harrisjt_">
@@ -30,13 +30,117 @@
     <meta name="twitter:image" content="http?://???.com/_include/img/">
 
 
-    <link rel="shortcut icon" href="_include/img/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="_include/img/favicon.ico">
+    <link rel="shortcut icon" href="_include/img/lw.png">
+    <link rel="apple-touch-icon-precomposed" href="_include/img/lw.png">
     <meta name="description" content="">
     <link rel="canonical" href="http?://???.com/">
 
 </head>
 <body>
+<main class="weather-wrapper">
+    <h1 class="location__current">Weather for: Franklin, WI</h1>
+    <form class="change-location">
+        <label for="change-location__input">Enter a ZIP, City, or Place</label>
+        <input id="change-location__input" type="search" name="location">
+        <button class="change-location__submit" type="submit">Change Location</button>
+    </form>
+    <div class="weather-daily">
+        <section class="weather-current">
+            <h2 class="weather-current__title">Current:</h2><span
+                class="weather-current__update-time">(Updated 2:06pm)</span>
+            <div class="weather-current__info">
+                <span class="weather-current__temp">33&deg;</span>
+                <span class="weather-current__type">Overcast feels like 23&deg;</span>
+                <span class="weather-current__wind">16mph breeze from NorthWest</span>
+            </div>
+        </section>
+        <section class="weather-today">
+            <h2 class="weather-today__title">Today:</h2>
+            <span class="weather-today__type">Mostly Cloudy until evening</span>
+            <div class="weather-today__type"><span class="weather-today__high">35&deg;</span><span
+                    class="weather-today__low">24&deg;</span></div>
+            <ul class="weather-today__hourly">
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+                <li class="weather-hourly__item hour"><span class="hour__info">3pm</span><span
+                        class="hour__temp">28&deg;</span><span class="hour__type">mostly cloudy feels like 12&deg; with 9mph NW wind</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="weather-weekly">
+        <section class="weather-week">
+            <h2 class="weather-week__title">This Week:</h2>
+            <ul class="weather-days">
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="day__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="ay__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="ay__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="ay__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="ay__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="ay__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
+                    <div class="ay__info"><span class="day__high">35&deg;</span><span
+                            class="day__low">24&deg;</span><span
+                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="weather-unit">
+        <button class="weather-unit__celsius" type="button">
+            &deg;Celsius &#124; km/h
+        </button>
+        <button class="weather-unit__fahrenheit" type="button">
+            &deg;Fahrenheit &#124; mph
+        </button>
+    </div>
+</main>
 
 </body>
 </html>
