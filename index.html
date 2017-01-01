@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
 
-    <link rel="preconnect" href="//fonts.googleapis.com">
+    <!--<link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/">
+    <link rel="stylesheet" href="//fonts.googleapis.com/">-->
 
     <!--TODO: Change to main.min.* for production-->
     <link rel="stylesheet" href="_include/css/main.css">
@@ -17,8 +17,8 @@
     <link rel="preload" href="_include/img/" as="image">
     -->
 
-    <link rel="preconnect" href="//www.google-analytics.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
+    <!--<link rel="preconnect" href="//www.google-analytics.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">-->
 
     <title>HarrisJT's Local Weather</title>
 
@@ -38,7 +38,7 @@
 </head>
 <body>
 <main class="weather-wrapper">
-    <h1 class="location__current">Weather for: Franklin, WI</h1>
+    <h1 class="location__current"></h1>
     <form class="change-location">
         <label for="change-location__input">Enter a ZIP, City, or Place</label>
         <input id="change-location__input" type="search" name="location">
@@ -46,12 +46,13 @@
     </form>
     <div class="weather-daily">
         <section class="weather-current">
-            <h2 class="weather-current__title">Current:</h2><span
-                class="weather-current__update-time">(Updated 2:06pm)</span>
+            <h2 class="weather-current__title">Current: </h2><span
+                class="weather-current__update-time"></span>
             <div class="weather-current__info">
-                <span class="weather-current__temp">33&deg;</span>
-                <span class="weather-current__type">Overcast feels like 23&deg;</span>
-                <span class="weather-current__wind">16mph breeze from NorthWest</span>
+                <span class="weather-current__temp"></span>
+                <span class="weather-current__summary"></span>
+                <span class="weather-current__feel"></span>
+                <span class="weather-current__wind"></span>
             </div>
         </section>
         <section class="weather-today">

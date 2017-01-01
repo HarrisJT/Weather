@@ -68,6 +68,27 @@ body {
     border-bottom: 1px solid #d0d9dc;
 }
 
+.weather-current__title {
+    display: inline;
+}
+
+.weather-current__temp {
+    font-size: 3.375em;
+}
+
+.weather-current__summary {
+    font-size: 3.25em;
+}
+
+.weather-current__feel {
+    display: block;
+    font-size: 1.25em;
+}
+
+.weather-current__wind {
+    font-size: 1.25em;
+}
+
 .weather-today__hourly {
     height: 100%;
     margin: 0;
@@ -91,7 +112,6 @@ body {
 .weather-unit__celsius, .weather-unit__fahrenheit {
     flex: 1 50%;
 }
-
 
 /* ==========================================================================
    HELPER CLASSES
