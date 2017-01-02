@@ -77,6 +77,7 @@ body {
 }
 
 .weather-current__summary {
+    margin-left: .33em;
     font-size: 3.25em;
 }
 
@@ -95,6 +96,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    border: 2px solid red;
+}
+
+.hour__info, .hour__temp, .hour__summary, .weather-today__high, .weather-today__low {
+    margin: 0 10px;
 }
 
 .weather-weekly {
@@ -109,8 +117,8 @@ body {
     flex: 3 100%;
 }
 
-.weather-unit__celsius, .weather-unit__fahrenheit {
-    flex: 1 50%;
+.weather-unit > * {
+    flex: 1 25%;
 }
 
 /* ==========================================================================
