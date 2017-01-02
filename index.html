@@ -50,101 +50,134 @@
                 class="weather-current__update-time"></span>
             <div class="weather-current__info">
                 <span class="weather-current__temp"></span>
-                <span class="weather-current__summary"></span>
-                <span class="weather-current__feel"></span>
-                <span class="weather-current__wind"></span>
+                <!--[if gte IE 9]><!-->
+                <img class="weather-current__icon" src="_include/img/icons/cloudy.svg"
+                     alt="icon summary of the current weather" title="icon summary of the current weather"/>
+                <!--<![endif]-->
+                <!--[if lte IE 8]>
+                <![endif]-->
             </div>
+            <span class="weather-current__summary"></span>
+            <span class="weather-current__feel"></span>
+            <span class="weather-current__wind"></span>
+
         </section>
         <section class="weather-today">
             <h2 class="weather-today__title">Today:</h2>
-            <span class="weather-today__summary"></span>
             <div class="weather-today__type"><span class="weather-today__high"></span><span
                     class="weather-today__low"></span></div>
-            <ul class="weather-today__hourly">
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-                <li class="weather-hourly__item hour"><span class="hour__info"></span><span
-                        class="hour__temp"></span><span class="hour__summary"></span>
-                </li>
-            </ul>
+            <span class="weather-today__summary"></span>
+            <table class="weather-hours">
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+                <tr class="weather-hours__item hour">
+                    <td class="hour__title"></td>
+                    <td
+                            class="hour__temp"></td>
+                    <td class="hour__summary"></td>
+                </tr>
+            </table>
         </section>
     </div>
     <div class="weather-weekly">
         <section class="weather-week">
-            <h2 class="weather-week__title">This Week:</h2>
+            <h2 class="weather-week__title">Next 7 Days:</h2>
+            <span class="weather-week__summary"></span>
             <ul class="weather-days">
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="day__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="ay__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="ay__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="ay__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="ay__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="ay__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title">Monday:</h3>
-                    <div class="ay__info"><span class="day__high">35&deg;</span><span
-                            class="day__low">24&deg;</span><span
-                            class="day__rain">Rain Chance: 25% in the morning</span></div>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
                 </li>
+                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
+                    <span class="day__summary"></span><span class="day__rain"></span>
+                </li>
+
             </ul>
         </section>
     </div>
     <div class="weather-unit">
-        <button class="weather-unit__us" type="button">
-            &deg;Fahrenheit , mph
+        <button class="weather-unit__us weather-unit--selected" type="button">
+            &deg;Fahrenheit, mph
         </button>
         <button class="weather-unit__si" type="button">
-            &deg;Celsius , m/s
+            &deg;Celsius, m/s
         </button>
         <button class="weather-unit__uk" type="button">
-            &deg;Celsius , mph
+            &deg;Celsius, mph
         </button>
         <button class="weather-unit__ca" type="button">
-            &deg;Celsius , km/h
+            &deg;Celsius, km/h
         </button>
     </div>
 </main>

@@ -59,7 +59,8 @@ function weather(units) {
             }
           })(resp.flags.units);
 
-          //DAILY
+          // DAILY
+          document.querySelector('.weather-current__icon').src = `_include/img/icons/${icon}.svg`;
 
           // Update the weather-current__wind text
           wind.innerHTML = updateWind(resp.currently.windSpeed, speedUnits,
@@ -71,21 +72,20 @@ function weather(units) {
 
           temp.innerHTML = `${Math.round(resp.currently.temperature)}&deg;${degreeUnits}`;
           summary.innerHTML = `${resp.currently.summary}.`;
-          feel.innerHTML = `Feels like ${Math.round(resp.currently.apparentTemperature)}&deg;
-          ${degreeUnits}`;
+          feel.innerHTML = `Feels like ${Math.round(resp.currently.apparentTemperature)}&deg;${degreeUnits}`;
 
-          //HOURLY
+          // TODAY & HOURLY
 
           const todaySummary = document.querySelector('.weather-today__summary');
           const todayHigh = document.querySelector('.weather-today__high');
           const todayLow = document.querySelector('.weather-today__low');
-          const hourlyInfo = document.querySelectorAll('.hour__info');
+          const hourlyInfo = document.querySelectorAll('.hour__title');
           const hourlyTemp = document.querySelectorAll('.hour__temp');
           const hourlySummary = document.querySelectorAll('.hour__summary');
 
           // Adding the info to hourly
           todaySummary.innerHTML = resp.hourly.summary;
-          todayHigh.innerHTML = `High ${Math.round(resp.daily.data[0].temperatureMax)}&deg;`;
+          todayHigh.innerHTML = `High ${Math.round(resp.daily.data[0].temperatureMax)}&deg; `;
           todayLow.innerHTML = `Low ${Math.round(resp.daily.data[0].temperatureMin)}&deg;`;
 
 
@@ -100,6 +100,56 @@ function weather(units) {
             ${Math.round(resp.hourly.data[i + 1].apparentTemperature)}&deg; with 
             ${updateWind(resp.hourly.data[i + 1].windSpeed, speedUnits, resp.hourly.data[i + 1].windBearing)
                 .split(' coming').shift()}`;
+          }
+
+          // WEEK & DAILY
+          const weekSummary = document.querySelector('.weather-week__summary');
+          const dailyTitle = document.querySelectorAll('.day__title');
+          const dailyHigh = document.querySelectorAll('.day__high');
+          const dailyLow = document.querySelectorAll('.day__low');
+          const dailySummary = document.querySelectorAll('.day__summary');
+          const dailyRain = document.querySelectorAll('.day__rain');
+
+          weekSummary.innerHTML = resp.daily.summary;
+          const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug ', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+          function ordinalSuffix(i) {
+            const j = i % 10;
+            const k = i % 100;
+            if (j == 1 && k != 11) {
+              return i + 'st';
+            }
+
+            if (j == 2 && k != 12) {
+              return i + 'nd';
+            }
+
+            if (j == 3 && k != 13) {
+              return i + 'rd';
+            }
+
+            return i + 'th';
+          }
+
+          function rainChance(type, prob) {
+            switch (type) {
+              case undefined:
+                return '';
+                break;
+              default:
+                return ` Chance of ${type} is ${prob * 100}%`;
+                break;
+            }
+          }
+
+          for (let i = 1; i <= 7; i++) {
+            const weekInfo = new Date(resp.daily.data[i].time * 1000);
+            dailyTitle[i].innerHTML = `${weekDays[weekInfo.getDay()]}, ${months[weekInfo.getMonth()]} ${ordinalSuffix(weekInfo.getDate())}`;
+            dailyHigh[i].innerHTML = `High ${Math.round(resp.daily.data[i].temperatureMax)}&deg;`;
+            dailyLow[i].innerHTML = `Low ${Math.round(resp.daily.data[i].temperatureMin)}&deg;`;
+            dailySummary[i].innerHTML = resp.daily.data[i].summary;
+            dailyRain[i].innerHTML = `${rainChance(resp.daily.data[i].precipType, resp.daily.data[i].precipProbability)}`;
           }
 
         } else {
