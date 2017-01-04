@@ -4,7 +4,6 @@ This website fetches the local weather and give the option to change units betwe
 
 Project from [FreeCodeCamp](https://www.freecodecamp.com/challenges/show-the-local-weather)
 
-#### [LIVE DEMO](https://codepen.io/harrisjt/pen/RKwYgv)
 
 ![Screenshot of HarrisJT's Weather Website](_include/img/lw.png?raw=true "Screenshot")
 
