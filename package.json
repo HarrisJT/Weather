@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarrisJT/Local-Weather.git"
+    "url": "git+https://github.com/HarrisJT/Weather.git"
   },
   "keywords": [
     "local",
@@ -19,9 +19,9 @@
   "author": "Harris J Thompson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HarrisJT/Local-Weather/issues"
+    "url": "https://github.com/HarrisJT/Weather/issues"
   },
-  "homepage": "https://github.com/HarrisJT/Local-Weather#readme",
+  "homepage": "https://github.com/HarrisJT/Weather#readme",
   "devDependencies": {
     "babel-preset-babili": "0.0.9",
     "gulp": "github:gulpjs/gulp#4.0",

@@ -1,12 +1,12 @@
-# HarrisJT's Weather App
+# HarrisJT's Weather Website
 
 This website fetches the local weather and give the option to change units between 4 standards. You can also search for a city and the common unit and time format will be used based on that location. Fully Responsive.
 
 Project from [FreeCodeCamp](https://www.freecodecamp.com/challenges/show-the-local-weather)
 
-#### [LIVE DEMO](http://codepen.io/harrisjt/pen/)
+#### [LIVE DEMO](https://codepen.io/harrisjt/pen/RKwYgv)
 
-![Screenshot of HarrisJT's Local Weather](_include/img/lw.png?raw=true "Screenshot")
+![Screenshot of HarrisJT's Weather Website](_include/img/lw.png?raw=true "Screenshot")
 
 * [HJTemplate](https://github.com/HarrisJT/HJTemplate) - The code template used to initialize
 * [DarkSky](https://darksky.net/poweredby/) - Weather API used
