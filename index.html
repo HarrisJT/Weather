@@ -3,47 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>HarrisJT's Weather App</title>
 
-    <!--<link rel="preconnect" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//maps.googleapis.com">
+    <link rel="preconnect" href="//csi.gstatic.com">
+    <link rel="preconnect" href="//api.darksky.net" crossorigin>
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/">-->
-
-    <!--TODO: Change to main.min.* for production-->
     <link rel="stylesheet" href="_include/css/main.css">
-    <script type="text/javascript" src="_include/js/main.js" async></script>
-
-    <!-- TODO: Preload any important above the fold images
-    <link rel="preload" href="_include/img/" as="image">
-    -->
-
-    <!--<link rel="preconnect" href="//www.google-analytics.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">-->
-
-    <title>HarrisJT's Local Weather</title>
+    <script async type="text/javascript" src="_include/js/main.js"></script>
+    <script async src="//maps.googleapis.com/maps/api/js?key=AIzaSyAzEv9zvjg8QDMstcTU-p2zSJPMZG7wrxI"></script>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@harrisjt_">
-    <meta name="twitter:domain" content="">
     <meta name="twitter:creator" content="@harrisjt_">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:image" content="http?://???.com/_include/img/">
+    <meta name="twitter:title" content="HarrisJT's Weather App">
 
 
     <link rel="shortcut icon" href="_include/img/lw.png">
     <link rel="apple-touch-icon-precomposed" href="_include/img/lw.png">
-    <meta name="description" content="">
-    <link rel="canonical" href="http?://???.com/">
-
+    <meta name="description" content="HarrisJT's Weather App">
 </head>
 <body>
 <main class="weather-wrapper">
     <h1 class="location__current"></h1>
-    <form class="change-location">
-        <label for="change-location__input">Enter a ZIP, City, or Place</label>
-        <input id="change-location__input" type="search" name="location">
-        <button class="change-location__submit" type="submit">Change Location</button>
-    </form>
+    <div class="change-location">
+        <label class="change-location__label" for="change-location__input">Enter a City, Place, or ZIP:</label>
+        <input id="change-location__input" type="search" placeholder="">
+        <button class="change-location__submit" type="button">Change Location</button>
+    </div>
     <div class="weather-daily">
         <section class="weather-current">
             <h2 class="weather-current__title">Current: </h2><span
@@ -70,56 +57,47 @@
             <table class="weather-hours">
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
                 <tr class="weather-hours__item hour">
                     <td class="hour__title"></td>
-                    <td
-                            class="hour__temp"></td>
+                    <td class="hour__temp"></td>
                     <td class="hour__summary"></td>
                 </tr>
             </table>
@@ -130,37 +108,75 @@
             <h2 class="weather-week__title">Next 7 Days:</h2>
             <span class="weather-week__summary"></span>
             <ul class="weather-days">
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
+                <li class="weather-days__item day"><h3 class="day__title"></h3><!--[if gte IE 9]><!-->
+                    <img class="day__icon" src="_include/img/icons/cloudy.svg"
+                         alt="icon summary of the specific days weather"
+                         title="icon summary of the specific days weather"/>
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                    <![endif]-->
                     <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
-                </li>
-                <li class="weather-days__item day"><h3 class="day__title"></h3>
-                    <div class="day__info"><span class="day__high"></span><span class="day__low"></span></div>
-                    <span class="day__summary"></span><span class="day__rain"></span>
+                    <span class="day__summary"></span><span class="day__precip"></span>
                 </li>
 
             </ul>
@@ -181,7 +197,8 @@
         </button>
     </div>
 </main>
-
+<footer><a href="https://darksky.net/poweredby/" rel="noopener nofollow" target="_blank">Powered by Dark Sky</a>
+</footer>
 </body>
 </html>
 
